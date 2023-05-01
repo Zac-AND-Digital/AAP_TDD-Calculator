@@ -5,20 +5,20 @@ import java.awt.*;
 
 public class ViewGUI extends JFrame {
 
-    private JPanel panelMain;
-    private JTextField textFieldUserInput;
-    private JButton buttonOne;
-    private JButton buttonTwo;
-    private JButton buttonThree;
-    private JButton buttonFour;
-    private JButton buttonFive;
-    private JButton buttonSix;
-    private JButton buttonSeven;
-    private JButton buttonEight;
-    private JButton buttonNine;
-    private JButton buttonZero;
-    private JButton buttonAC;
-    private JButton buttonEquals;
+    JPanel panelMain;
+    JTextField textFieldUserInput;
+    JButton buttonOne;
+    JButton buttonTwo;
+    JButton buttonThree;
+    JButton buttonFour;
+    JButton buttonFive;
+    JButton buttonSix;
+    JButton buttonSeven;
+    JButton buttonEight;
+    JButton buttonNine;
+    JButton buttonZero;
+    JButton buttonAC;
+    JButton buttonEquals;
 
     private void init() {
 
@@ -48,7 +48,55 @@ public class ViewGUI extends JFrame {
     public ViewGUI() {
         
         SwingUtilities.invokeLater(this::init);
-        
+
+        buttonOne.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonTwo.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonThree.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonFour.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonFive.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonSix.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonSeven.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonEight.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonNine.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonZero.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonAC.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
+        buttonEquals.addActionListener(actionEvent -> {
+            // TODO: Implement Method
+        });
+
     }
 
 }
