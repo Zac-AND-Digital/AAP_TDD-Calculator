@@ -5,6 +5,8 @@ public enum Operation {
     ADD,
     SUBTRACT,
     MULTIPLY,
-    DIVIDE
+    DIVIDE,
+    MALFORMED,
+    NO_OPERATION
 
 }
