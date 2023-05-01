@@ -99,6 +99,35 @@ class ViewGUITest {
         assertEquals("", viewGUI.textFieldUserInput.getText());
     }
 
+
+    @Test
+    void buttonAddClick() {
+        assertEquals("+", viewGUI.buttonAdd.getText());
+        viewGUI.buttonAdd.doClick();
+        assertEquals(" + ", viewGUI.textFieldUserInput.getText());
+    }
+
+    @Test
+    void buttonSubtractClick() {
+        assertEquals("-", viewGUI.buttonSubtract.getText());
+        viewGUI.buttonSubtract.doClick();
+        assertEquals(" - ", viewGUI.textFieldUserInput.getText());
+    }
+
+    @Test
+    void buttonMultiplyClick() {
+        assertEquals("*", viewGUI.buttonMultiply.getText());
+        viewGUI.buttonMultiply.doClick();
+        assertEquals(" * ", viewGUI.textFieldUserInput.getText());
+    }
+
+    @Test
+    void buttonDivideClick() {
+        assertEquals("/", viewGUI.buttonDivide.getText());
+        viewGUI.buttonDivide.doClick();
+        assertEquals(" / ", viewGUI.textFieldUserInput.getText());
+    }
+
     @Test
     void buttonEqualsClick() {
 
