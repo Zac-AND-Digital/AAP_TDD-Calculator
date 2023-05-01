@@ -1,6 +1,7 @@
 import gui.ViewGUI;
 
 import javax.swing.*;
+import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 
@@ -8,10 +9,11 @@ public class Main {
             UnsupportedLookAndFeelException,
             ClassNotFoundException,
             InstantiationException,
-            IllegalAccessException {
+            IllegalAccessException, InterruptedException, InvocationTargetException {
 
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        SwingUtilities.invokeLater(ViewGUI::new);
+
+        new ViewGUI();
 
     }
 

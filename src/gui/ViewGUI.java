@@ -2,6 +2,7 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.lang.reflect.InvocationTargetException;
 
 public class ViewGUI extends JFrame {
 
@@ -45,52 +46,52 @@ public class ViewGUI extends JFrame {
         
     }
     
-    public ViewGUI() {
+    public ViewGUI() throws InterruptedException, InvocationTargetException {
         
-        SwingUtilities.invokeLater(this::init);
+        SwingUtilities.invokeAndWait(this::init);
 
         buttonOne.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "1");
         });
 
         buttonTwo.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "2");
         });
 
         buttonThree.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "3");
         });
 
         buttonFour.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "4");
         });
 
         buttonFive.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "5");
         });
 
         buttonSix.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "6");
         });
 
         buttonSeven.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "7");
         });
 
         buttonEight.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "8");
         });
 
         buttonNine.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "9");
         });
 
         buttonZero.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText(textFieldUserInput.getText() + "0");
         });
 
         buttonAC.addActionListener(actionEvent -> {
-            // TODO: Implement Method
+            textFieldUserInput.setText("");
         });
 
         buttonEquals.addActionListener(actionEvent -> {
