@@ -1,7 +1,5 @@
 package parse;
 
-import java.util.Arrays;
-
 public class ModelParse {
 
     Operation getOperation(String[] input) {
