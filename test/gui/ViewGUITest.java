@@ -159,4 +159,128 @@ class ViewGUITest {
 
     }
 
+    @Test
+    void userJourneyAddition() {
+
+        assertEquals("", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonOne.doClick();
+        viewGUI.buttonThree.doClick();
+        viewGUI.buttonFive.doClick();
+        viewGUI.buttonSeven.doClick();
+        viewGUI.buttonNine.doClick();
+
+        viewGUI.buttonAdd.doClick();
+
+        viewGUI.buttonTwo.doClick();
+        viewGUI.buttonFour.doClick();
+        viewGUI.buttonSix.doClick();
+        viewGUI.buttonEight.doClick();
+        viewGUI.buttonZero.doClick();
+
+        assertEquals("13579 + 24680", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonEquals.doClick();
+
+        assertEquals("38259", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonAC.doClick();
+
+        assertEquals("", viewGUI.textFieldUserInput.getText());
+
+    }
+
+    @Test
+    void userJourneySubtraction() {
+
+        assertEquals("", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonOne.doClick();
+        viewGUI.buttonThree.doClick();
+        viewGUI.buttonFive.doClick();
+        viewGUI.buttonSeven.doClick();
+        viewGUI.buttonNine.doClick();
+
+        viewGUI.buttonSubtract.doClick();
+
+        viewGUI.buttonTwo.doClick();
+        viewGUI.buttonFour.doClick();
+        viewGUI.buttonSix.doClick();
+        viewGUI.buttonEight.doClick();
+        viewGUI.buttonZero.doClick();
+
+        assertEquals("13579 - 24680", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonEquals.doClick();
+
+        assertEquals("-11101", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonAC.doClick();
+
+        assertEquals("", viewGUI.textFieldUserInput.getText());
+
+    }
+
+    @Test
+    void userJourneyMultiply() {
+
+        assertEquals("", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonOne.doClick();
+        viewGUI.buttonThree.doClick();
+        viewGUI.buttonFive.doClick();
+        viewGUI.buttonSeven.doClick();
+        viewGUI.buttonNine.doClick();
+
+        viewGUI.buttonMultiply.doClick();
+
+        viewGUI.buttonTwo.doClick();
+        viewGUI.buttonFour.doClick();
+        viewGUI.buttonSix.doClick();
+        viewGUI.buttonEight.doClick();
+        viewGUI.buttonZero.doClick();
+
+        assertEquals("13579 * 24680", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonEquals.doClick();
+
+        assertEquals("3.3512972E8", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonAC.doClick();
+
+        assertEquals("", viewGUI.textFieldUserInput.getText());
+
+    }
+
+    @Test
+    void userJourneyDivision() {
+
+        assertEquals("", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonOne.doClick();
+        viewGUI.buttonThree.doClick();
+        viewGUI.buttonFive.doClick();
+        viewGUI.buttonSeven.doClick();
+        viewGUI.buttonNine.doClick();
+
+        viewGUI.buttonDivide.doClick();
+
+        viewGUI.buttonTwo.doClick();
+        viewGUI.buttonFour.doClick();
+        viewGUI.buttonSix.doClick();
+        viewGUI.buttonEight.doClick();
+        viewGUI.buttonZero.doClick();
+
+        assertEquals("13579 / 24680", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonEquals.doClick();
+
+        assertEquals("0.5502025931928687", viewGUI.textFieldUserInput.getText());
+
+        viewGUI.buttonAC.doClick();
+
+        assertEquals("", viewGUI.textFieldUserInput.getText());
+
+    }
+
 }
