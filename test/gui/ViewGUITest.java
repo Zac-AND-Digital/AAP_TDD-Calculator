@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.InvocationTargetException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ViewGUITest {
@@ -11,10 +13,13 @@ class ViewGUITest {
     private ViewGUI viewGUI;
 
     @BeforeEach
-    void init() { viewGUI = new ViewGUI(); }
+    void init() throws InterruptedException, InvocationTargetException { viewGUI = new ViewGUI(); }
 
     @AfterEach
-    void teardown() { viewGUI = null; }
+    void teardown() {
+        viewGUI.dispose();
+        viewGUI = null;
+    }
 
     @Test
     void buttonOneClick() {
@@ -26,63 +31,63 @@ class ViewGUITest {
     @Test
     void buttonTwoClick() {
         assertEquals("2", viewGUI.buttonTwo.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonTwo.doClick();
         assertEquals("2", viewGUI.textFieldUserInput.getText());
     }
 
     @Test
     void buttonThreeClick() {
         assertEquals("3", viewGUI.buttonThree.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonThree.doClick();
         assertEquals("3", viewGUI.textFieldUserInput.getText());
     }
 
     @Test
     void buttonFourClick() {
         assertEquals("4", viewGUI.buttonFour.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonFour.doClick();
         assertEquals("4", viewGUI.textFieldUserInput.getText());
     }
 
     @Test
     void buttonFiveClick() {
         assertEquals("5", viewGUI.buttonFive.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonFive.doClick();
         assertEquals("5", viewGUI.textFieldUserInput.getText());
     }
 
     @Test
     void buttonSixClick() {
         assertEquals("6", viewGUI.buttonSix.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonSix.doClick();
         assertEquals("6", viewGUI.textFieldUserInput.getText());
     }
 
     @Test
     void buttonSevenClick() {
         assertEquals("7", viewGUI.buttonSeven.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonSeven.doClick();
         assertEquals("7", viewGUI.textFieldUserInput.getText());
     }
 
     @Test
     void buttonEightClick() {
         assertEquals("8", viewGUI.buttonEight.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonEight.doClick();
         assertEquals("8", viewGUI.textFieldUserInput.getText());
     }
 
     @Test
     void buttonNineClick() {
         assertEquals("9", viewGUI.buttonNine.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonNine.doClick();
         assertEquals("9", viewGUI.textFieldUserInput.getText());
     }
 
     @Test
-    void buttonTenClick() {
+    void buttonZeroClick() {
         assertEquals("0", viewGUI.buttonZero.getText());
-        viewGUI.buttonOne.doClick();
+        viewGUI.buttonZero.doClick();
         assertEquals("0", viewGUI.textFieldUserInput.getText());
     }
 
